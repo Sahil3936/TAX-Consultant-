@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O-WIN | One Window Society Solution</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome (for WhatsApp & Phone icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".sidebar" data-bs-offset="80" tabindex="0">
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Logo -->
+  <a href="#home" class="top-logo">
+    <img src="images/logo.png" alt="O-WIN Logo" />
+  </a>
+
+  <!-- Sidebar Navigation (Desktop) -->
+  <nav class="sidebar d-none d-md-block">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link active" href="#home"><i class="fas fa-home"></i><span>Home</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-cogs"></i><span>Services</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-users"></i><span>About</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu d-md-none" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div id="mobileNav" class="mobile-nav d-md-none">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero d-flex align-items-center text-center" data-aos="fade-up">
+    <div class="overlay"></div>
+    <div class="hero-content text-center">
+      <h1 class="hero-title" data-aos="zoom-in">Your <span class="highlight">One-Stop</span> Society Solution</h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Audit • Accounting • Taxation • Legal • App-Based Services
+      </p>
+      <div class="mt-4" data-aos="fade-up" data-aos-delay="400">
+        <a href="#services" class="btn btn-warning btn-lg me-3">Explore Services</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Our Services</h2>
+
+      <div class="accordion" id="servicesAccordion">
+
+        <!-- Audit -->
+        <div class="accordion-item" data-aos="fade-up">
+          <h2 class="accordion-header" id="auditHeading">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#audit" aria-expanded="true">
+              <i class="fas fa-file-invoice-dollar me-2"></i> Audit
+            </button>
+          </h2>
+          <div id="audit" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Statutory Audit</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Internal Audit</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Tax & GST Audit</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Audit Rectification Reports</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accounting -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="accordion-header" id="accountingHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accounting">
+              <i class="fas fa-calculator me-2"></i> Society Accounting
+            </button>
+          </h2>
+          <div id="accounting" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Monthly/Quarterly Bills</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Receipts & Vouchers</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Ledger & Balance Sheets</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Annual Budget Preparation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Taxation -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="accordion-header" id="taxHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#taxation">
+              <i class="fas fa-landmark me-2"></i> Taxation
+            </button>
+          </h2>
+          <div id="taxation" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> TDS & Income Tax Returns</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> GST Filing & Registration</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> PAN & TAN Applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+          <h2 class="accordion-header" id="legalHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#legal">
+              <i class="fas fa-gavel me-2"></i> Legal Services
+            </button>
+          </h2>
+          <div id="legal" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Society Registration</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Conveyance Deed</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Society Elections</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Flat Transfer File</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Adoption of Bye-Laws</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Rent Agreements & NOCs</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> 101 Recovery Cases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- App -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+          <h2 class="accordion-header" id="appHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#app">
+              <i class="fas fa-mobile-alt me-2"></i> Member Mobile App
+            </button>
+          </h2>
+          <div id="app" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Online Bill Payment</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> UPI, Net Banking, Card Options</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Balance Inquiry</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Online Notices & Reminders</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registers -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+          <h2 class="accordion-header" id="registersHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#registers">
+              <i class="fas fa-book me-2"></i> Registers Maintained
+            </button>
+          </h2>
+          <div id="registers" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Form I & J Register</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Share Register</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Nomination Register</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Investment Register</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Preparing Share Certificates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Services -->
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+          <h2 class="accordion-header" id="otherHeading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#others">
+              <i class="fas fa-clipboard-list me-2"></i> Other Services
+            </button>
+          </h2>
+          <div id="others" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+            <div class="accordion-body text-start">
+              <ul>
+                <li><i class="fas fa-check-circle text-success me-2"></i> NOC to Members</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Audit Rectification Reports</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Maintenance Reminders</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> AGM & Special AGM Notices</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Co-op Society Consultation</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i> Committee & AGM Minutes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- About Us Section -->
+<section id="about" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">About Us</h2>
+    <p class="lead mb-4">
+      <strong>O-WIN (One Window Society Solution)</strong> is your trusted partner in 
+      <strong>Accounting, Audit, Taxation, and Legal Services</strong>.  
+      We make society management <strong>simple, transparent, and 100% compliant</strong>.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="about-card">
+          <i class="fas fa-user-shield fa-2x text-primary mb-2"></i>
+          <h5>Trusted Services</h5>
+          <p>We ensure compliance with cooperative laws, giving societies peace of mind.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="about-card">
+          <i class="fas fa-laptop-code fa-2x text-success mb-2"></i>
+          <h5>Digital Solutions</h5>
+          <p>Our society app & digital tools simplify billing, payments, and communication.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="about-card">
+          <i class="fas fa-briefcase fa-2x text-danger mb-2"></i>
+          <h5>Professional Expertise</h5>
+          <p>Backed by experts in audit, taxation & legal, we deliver accuracy and value.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-choose" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title text-white mb-4">Why Choose O-WIN?</h2>
+    <p class="section-text text-white mx-auto mb-4">
+      We provide complete society management solutions under one roof.  
+      Here’s why <strong>societies choose O-WIN</strong> as their trusted partner:
+    </p>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Compliance -->
+      <div class="col-md-3 col-6" data-aos="zoom-in">
+        <div class="choose-card colorful-card small-card">
+          <div class="icon-circle bg-primary">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h4 class="counter" data-target="100">0</h4>
+          <p class="small text-muted">% Compliance</p>
+        </div>
+      </div>
+
+      <!-- Trusted -->
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="choose-card colorful-card small-card">
+          <div class="icon-circle bg-success">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4 class="counter" data-target="500">0</h4>
+          <p class="small text-muted">+ Societies</p>
+        </div>
+      </div>
+
+      <!-- Digital -->
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="choose-card colorful-card small-card">
+          <div class="icon-circle bg-warning">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4 class="counter" data-target="1000">0</h4>
+          <p class="small text-muted">+ App Users</p>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="choose-card colorful-card small-card">
+          <div class="icon-circle bg-danger">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h4 class="counter" data-target="50">0</h4>
+          <p class="small text-muted">+ Experts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Contact Us</h2>
+    <p class="section-text text-center mb-5">We’re here to help! Visit us or reach out using the form below.</p>
+
+    <div class="row g-4">
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <div class="contact-info p-4 bg-white shadow-sm rounded">
+          <h5><i class="fas fa-map-marker-alt text-primary"></i> Ulwe Office</h5>
+          <p>Shop No. 3, Shree Siddhivinayak CHS,<br>Plot No. 31, Sector 24, Ulwe, Navi Mumbai</p>
+
+          <h5><i class="fas fa-map-marker-alt text-primary"></i> Vashi Branch</h5>
+          <p>Central Facility Building,<br>APMC Fruit Market, Vashi, Navi Mumbai</p>
+          
+          <h5><i class="fas fa-phone text-success"></i> Phone</h5>
+          <p>Ram: 8419981111<br>Suresh: 9323589780<br>Roshan: 9730712388</p>
+          
+          <h5><i class="fas fa-envelope text-danger"></i> Email</h5>
+          <p>owinsolutions@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <form id="contactForm" action="https://formspree.io/f/xyzdnqed" method="POST" class="p-4 bg-white shadow-sm rounded" novalidate>
+          <div id="formAlert" class="alert d-none" role="alert" aria-live="polite"></div>
+
+          <div class="mb-3">
+            <label for="cf-name" class="form-label">Full Name</label>
+            <input id="cf-name" type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="cf-email" class="form-label">Email Address</label>
+            <input id="cf-email" type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="cf-message" class="form-label">Message</label>
+            <textarea id="cf-message" name="message" rows="4" class="form-control" required></textarea>
+          </div>
+
+          <button id="cf-submit" type="submit" class="btn btn-primary w-100">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-spinner d-none ms-2"><i class="fas fa-circle-notch fa-spin"></i></span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Google Maps (Ulwe & Vashi) -->
+    <div class="row mt-5 g-4">
+      <!-- Ulwe Office Map -->
+      <div class="col-md-6">
+        <h5 class="text-center mb-2">📍 Ulwe Office</h5>
+        <iframe 
+          src="https://www.google.com/maps?q=Sector+24,+Ulwe,+Navi+Mumbai&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <!-- Vashi Branch Map -->
+      <div class="col-md-6">
+        <h5 class="text-center mb-2">📍 Vashi Branch</h5>
+        <iframe 
+          src="https://www.google.com/maps?q=APMC+Fruit+Market,+Vashi,+Navi+Mumbai&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer text-center py-3">
+    <p>&copy; 2025 O-WIN Society Solutions | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Progress Bar
+    window.onscroll = function() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("mobileNav").classList.toggle("active");
+    }
+  </script>
+  <script>
+  // Counter Animation
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  // Trigger when section is visible
+  let triggered = false;
+  window.addEventListener("scroll", () => {
+    const section = document.querySelector("#why-choose");
+    if (!triggered && section.getBoundingClientRect().top < window.innerHeight - 100) {
+      animateCounters();
+      triggered = true;
+    }
+  });
+</script>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919730712388?text=Hello%20O-WIN%20Team,%20I%20want%20to%20know%20more%20about%20your%20services." 
+   class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Floating Call Button -->
+<a href="tel:+9730712388" class="call-float">
+  <i class="fas fa-phone-alt"></i>
+</a>
+
+<!-- Bootstrap JS (if not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    const submitBtn = document.getElementById('cf-submit');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnSpinner = submitBtn.querySelector('.btn-spinner');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // basic validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // show spinner & disable
+      submitBtn.disabled = true;
+      btnSpinner.classList.remove('d-none');
+
+      const formData = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          // success
+          alertBox.className = 'alert alert-success';
+          alertBox.innerText = '✅ Thank you! Your message has been sent. We will contact you soon.';
+          alertBox.classList.remove('d-none');
+
+          form.reset();
+        } else {
+          // try to parse error
+          const data = await res.json().catch(()=>null);
+          const msg = (data && data.error) ? data.error : 'Server error. Please try again later.';
+          alertBox.className = 'alert alert-danger';
+          alertBox.innerText = '❌ ' + msg;
+          alertBox.classList.remove('d-none');
+        }
+      } catch (err) {
+        alertBox.className = 'alert alert-danger';
+        alertBox.innerText = '❌ Network error. Please check your connection and try again.';
+        alertBox.classList.remove('d-none');
+      } finally {
+        submitBtn.disabled = false;
+        btnSpinner.classList.add('d-none');
+      }
+    });
+  })();
+</script>
+
+
+</body>
+</html>
